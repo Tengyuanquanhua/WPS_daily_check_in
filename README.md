@@ -63,7 +63,7 @@ def request_re(sid, invite_userid, rep = 30):
         r = request_re(sid, invite_userid, rep)
     return r
 ```
-- 可在微信小程序“我的WPS会员”，‘任务’菜单->‘邀请好友’栏查看是否邀请成功（9 点以后）
+- 可在微信小程序“我的WPS会员”，‘任务’菜单->‘邀请好友’栏查看是否邀请成功（9 点以后） 
 
 ---
 #### 本来想做全自动打卡，但是查了 github 上其它项目后，发现打卡需要一个验证 code ，获取该 code 要调用微信内部方法 wx.login()。没办法破解，有没有大佬提供其它思路。
