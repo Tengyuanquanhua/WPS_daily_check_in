@@ -23,6 +23,7 @@ jobs:
         env:
           SERVER_KEY: ${{secrets.SERVER_KEY}}
           BARK_URL: ${{secrets.BARK_URL}}
+          QMSG_KEY: ${{secrets.QMSG_KEY}}
         run: python WPS_accept_invitation.py
 #       - name: 'Working-signin'
 #         env: 

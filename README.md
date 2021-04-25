@@ -22,12 +22,20 @@ WPS 有一个免费领会员的活动，关注微信小程序“我的WPS会员�
 
 # 手机接收邀请结果：
 ## SERVER 酱
-1. 微信关注“server 酱”，访问 http://sc.ftqq.com/?c=code ，微信登录后，在“发送消息”页面获取 SCKEY 的值。
-2. 在本页面上方 Settings → Secrets 中点击 New repository secret ，Name 填写 “**SERVER_KEY**”（不带引号），Value 中填写上一步获取的 SCKEY 值。
+1. 用于微信推送。
+2. 微信关注“server 酱”，访问 http://sc.ftqq.com/?c=code ，微信登录后，在“发送消息”页面获取 SCKEY 的值。
+3. 在本页面上方 Settings → Secrets 中点击 New repository secret ，Name 填写 “**SERVER_KEY**”，Value 中填写上一步获取的 SCKEY 值。
 
 ## Bark
-1. 手机下载 Bark APP（我用的 ios，Android 不知道有没有），获取推送链接（类似这个 https://api.day.app/xxxxxxxxxxxxx ）；
-2. 在本页面上方 Settings → Secrets 中点击 New repository secret ，Name 填写 “**BARK_URL**”（不带引号），Value 中填写上一步获取的链接。
+1. ios APP Bark 推送。
+2. 手机下载 Bark APP（我用的 ios，Android 不知道有没有），获取推送链接（类似这个 https://api.day.app/xxxxxxxxxxxxx ）；
+3. 在本页面上方 Settings → Secrets 中点击 New repository secret ，Name 填写 “**BARK_URL**”，Value 中填写上一步获取的链接。
+
+## Qmsg 酱
+1. 用于 QQ 推送。
+2. 访问 https://qmsg.zendee.cn/me.html#/login ，QQ 登录。
+3. 管理台→Qmsg酱 中选择一个Qmsg酱 QQ 号，并**添加该 QQ 为好友**；管理台→QQ号码 中填写自己的 QQ 号；管理台→KEY 中获取 Qmsg KEY。
+4. 在本页面上方 Settings → Secrets 中点击 New repository secret ，Name 填写 “**QMSG_KEY**”，Value 中填写上一步获取的  Qmsg KEY 值。
 
 # 每 60 天需要重新激活一下
 ![](https://user-images.githubusercontent.com/30107520/108630795-9f885200-74a1-11eb-85b3-7e9386f7fa05.jpg)  

@@ -22,7 +22,7 @@ mk = 0
 
 def request_re(sid, invite_userid, rep = 30):
     invite_url = 'http://zt.wps.cn/2018/clock_in/api/invite'
-    r = requests.post(invite_url, headers={'sid': sid}, data={'invite_userid': invite_userid})
+    r = requests.post( invite_url, headers={ 'sid': sid }, data={ 'invite_userid': invite_userid, "client_code": "040ce6c23213494c8de9653e0074YX30", "client": "alipay" } )
     js = json.loads(r.content)
     if js['msg'] == 'tryLater' and rep > 0:
         rep -= 1
@@ -54,3 +54,8 @@ if BARK_URL:
     text = 'WPS邀请好友任务：成功邀请到%d位好友'%(mk)
     bark_url = BARK_URL[:-1] if BARK_URL.endswith('/') else BARK_URL
     requests.get(bark_url + '/%s'%(text))
+    
+QMSG_KEY = os.getenv('QMSG_KEY')
+if QMSG_KEY:
+    text = 'WPS邀请好友任务：成功邀请到%d位好友'%(mk)
+    requests.get('https://qmsg.zendee.cn/send/%s?msg=%s'%(QMSG_KEY.strip(), text))
